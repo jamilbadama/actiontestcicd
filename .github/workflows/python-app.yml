@@ -36,12 +36,12 @@ jobs:
         export PYTHONPATH=src
         pytest
 
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_TOKEN}}
-          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
-          heroku_email: "jamilhussainnust@gmail.com"
+    - uses: actions/checkout@v2
+    - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_TOKEN}}
+        heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+        heroku_email: "jamilhussainnust@gmail.com"
 
 
     
